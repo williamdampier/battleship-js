@@ -1,11 +1,13 @@
 import './App.css';
 import Board from './components/Board';
+import ScoreBoard from './components/ScoreBoard';
 
 function App() {
   return (
-    <div className='app'>
+    <main>
       <Board />
-    </div>
+      <ScoreBoard />
+    </main>
   );
 }
 

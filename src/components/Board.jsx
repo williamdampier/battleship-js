@@ -25,13 +25,11 @@ const Board = () => {
   }, []);
 
   return (
-    <main>
-      <div className='board'>
-        {cells.map((item) => {
-          return <Cell key={item.id} id={item.id} status='hit' />;
-        })}
-      </div>
-    </main>
+    <div className='board'>
+      {cells.map((item) => {
+        return <Cell key={item.id} id={item.id} status='hit' />;
+      })}
+    </div>
   );
 };
 

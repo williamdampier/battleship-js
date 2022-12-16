@@ -1,15 +1,14 @@
 #root {
-  margin: 0 auto;
   --clr-primary: #ffa500;
   --clr-secondary: rgb(10, 131, 131);
   --clr-grey: hsl(210, 22%, 49%);
 }
-
+/* main tags */
 main {
   display: flex;
   flex-direction: row-reverse;
-  margin: 2rem;
-  max-width: 80%;
+  justify-content: space-between;
+  margin: 5rem;
 }
 
 img {
@@ -19,11 +18,11 @@ img {
   object-fit: cover;
 }
 
-.app {
-  display: inline-block;
-  max-width: 100%;
+hr {
+  width: 90%;
+  background-color: black;
 }
-
+/* game board */
 .board {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -39,7 +38,57 @@ img {
   border: 1px solid var(--clr-grey);
   min-height: 100%;
 }
-.stats-container {
+
+/* scoreboard container */
+
+.scoreboard {
+  margin: 1rem 10rem;
   display: flex;
   flex-direction: column;
+  color: black;
+}
+
+.player-board {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.player-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 5rem;
+}
+
+.first-player {
+  background-color: var(--clr-primary);
+}
+
+.second-player {
+  background-color: var(--clr-secondary);
+}
+
+.ship-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.ship-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hit-box {
+  display: inline;
+}
+
+.hit-icon {
+  margin: 2rem;
+  padding: 2rem;
 }
