@@ -1,10 +1,10 @@
 import React from 'react';
-import icon from '../assets/Hit.png';
+import Icon from './Icon';
 
-const Cell = () => {
+const Cell = ({ id, status }) => {
   return (
-    <div>
-      <img src={icon} alt='hit' />
+    <div className='cell' onClick={() => console.log(id)}>
+      {status !== 'empty' && <Icon status={status} />}
     </div>
   );
 };

@@ -5,12 +5,23 @@
   --clr-grey: hsl(210, 22%, 49%);
 }
 
-.main {
+main {
   display: flex;
   flex-direction: row-reverse;
   margin: 2rem;
-  padding: 2rem;
-  width: 80%;
+  max-width: 80%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.app {
+  display: inline-block;
+  max-width: 100%;
 }
 
 .board {
@@ -19,16 +30,15 @@
   grid-template-rows: repeat(10, 1fr);
   border: 5px solid #ffa500;
   padding: 0;
+  width: 35rem;
+  height: 35rem;
 }
 
 .cell {
-  display: flex;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
   border: 1px solid var(--clr-grey);
+  min-height: 100%;
 }
-
 .stats-container {
   display: flex;
   flex-direction: column;
