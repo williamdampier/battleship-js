@@ -1,13 +1,14 @@
 #root {
   --clr-primary: #ffa500;
-  --clr-secondary: rgb(10, 131, 131);
+  --clr-secondary: rgb(23, 165, 165);
   --clr-grey: hsl(210, 22%, 49%);
+  --clr-grey-text: hsl(210, 23%, 25%);
 }
 /* main tags */
 main {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: center;
   margin: 5rem;
 }
 
@@ -29,8 +30,8 @@ hr {
   grid-template-rows: repeat(10, 1fr);
   border: 5px solid #ffa500;
   padding: 0;
-  width: 35rem;
-  height: 35rem;
+  width: 40%;
+  height: 40%;
 }
 
 .cell {
@@ -42,10 +43,11 @@ hr {
 /* scoreboard container */
 
 .scoreboard {
-  margin: 1rem 10rem;
+  margin: 1rem 5rem;
   display: flex;
   flex-direction: column;
   color: black;
+  width: 25%;
 }
 
 .player-board {
@@ -58,8 +60,10 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  padding: 5rem;
+  align-items: center;
+  width: 50%;
+  padding: 0;
+  color: var(--clr-grey-text);
 }
 
 .first-player {

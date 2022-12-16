@@ -1,5 +1,6 @@
 import React from 'react';
 import PlayerScore from './PlayerScore';
+import ShipScore from './ShipScore';
 
 const ScoreBoard = () => {
   return (
@@ -8,6 +9,7 @@ const ScoreBoard = () => {
         <PlayerScore player='first' score={0} />
         <PlayerScore player='second' score={0} />
       </div>
+      <ShipScore />
     </div>
   );
 };
