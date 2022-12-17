@@ -1,6 +1,6 @@
 import './App.css';
-import Board from './components/Board';
-import ScoreBoard from './components/ScoreBoard';
+import Board from './components/board/Board';
+import ScoreBoard from './components/scoreboard/ScoreBoard';
 
 function App() {
   return (

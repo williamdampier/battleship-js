@@ -1,11 +1,9 @@
-import { config } from '../config';
+import { config } from '../../config';
 import { useEffect, useState } from 'react';
 import Cell from './Cell';
 
 const Board = () => {
   const [cells, setCells] = useState([]);
-
-  function initShipsPosition(shipsConfig) {}
 
   function fillBoard(cells) {
     let tmpArr = [];

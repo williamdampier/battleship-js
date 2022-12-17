@@ -1,10 +1,10 @@
 export const config = {
   shiptypes: {
-    carrier: { size: 5, count: 1 },
+    aircraft: { size: 5, count: 1 },
     battleship: { size: 5, count: 1 },
     cruiser: { size: 4, count: 1 },
     submarine: { size: 3, count: 1 },
-    destroyer: { size: 3, count: 1 },
+    carrier: { size: 3, count: 1 },
   },
   layout: [
     {

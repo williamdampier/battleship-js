@@ -1,4 +1,4 @@
-import icon from '../assets/Miss.png';
+import icon from '../../assets/Miss.png';
 
 const MissIcon = () => {
   return <img src={icon} alt='hit' />;
