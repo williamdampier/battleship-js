@@ -4,7 +4,7 @@ import Miss from './Miss';
 
 const Ship = ({ name, size, count }) => {
   const [hits, setHits] = useState([]);
-  console.log(name == 'crusier' && name);
+
   function initHits(size) {
     let tmpArr = [];
     if (size > 0) {

@@ -37,9 +37,9 @@ export const config = {
     {
       ship: 'submarine',
       positions: [
-        [6, 5],
-        [7, 5],
-        [8, 5],
+        [6, 7],
+        [7, 7],
+        [8, 7],
       ],
     },
     {

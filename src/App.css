@@ -15,6 +15,7 @@ main {
   flex-direction: row-reverse;
   justify-content: center;
   width: 80%;
+  height: 100vh;
   padding: 1rem;
 }
 
@@ -34,16 +35,19 @@ hr {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
+  grid-auto-flow: column;
   border: 5px solid #ffa500;
   padding: 0;
-  width: 40%;
-  height: 40%;
+  width: 40vw;
+  height: 40vw;
 }
 
 .cell {
   padding: 0;
+  margin: 0;
   border: 1px solid var(--clr-grey);
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* scoreboard container */
@@ -126,18 +130,19 @@ hr {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
   }
   .board {
     width: 80%;
     margin: 0;
+    width: 400px;
+    height: 400px;
   }
 
   .scoreboard {
     flex-direction: row;
     width: 80%;
     height: 25%;
-    margin: 3rem 0;
+    margin: 1rem 0;
     align-items: flex-start;
   }
 
@@ -182,9 +187,20 @@ hr {
   }
   .player-board {
     width: 100%;
+    padding: 0;
   }
 
   .ship-container {
     margin: 0;
+  }
+  .ship-box {
+    margin: 1rem 0;
+  }
+  .ship-image {
+    width: 80%;
+  }
+  .score-icon {
+    width: 10px;
+    height: 10px;
   }
 }
