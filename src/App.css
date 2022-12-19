@@ -4,12 +4,18 @@
   --clr-grey: hsl(210, 22%, 49%);
   --clr-grey-text: hsl(210, 23%, 25%);
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
 /* main tags */
 main {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  margin: 5rem;
+  width: 80%;
+  padding: 1rem;
 }
 
 img {
@@ -43,18 +49,18 @@ hr {
 /* scoreboard container */
 
 .scoreboard {
-  margin: 1rem 10rem;
   display: flex;
   flex-direction: column;
   color: black;
-  width: 25%;
+  width: 40%;
   justify-content: center;
+  align-items: center;
 }
 
 .player-board {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 50%;
 }
 
 .player-box {
@@ -62,7 +68,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   padding: 0;
   color: var(--clr-grey-text);
 }
@@ -88,4 +94,97 @@ hr {
   align-items: center;
   width: 50%;
   margin: 1rem auto;
+}
+.ship-image {
+  margin-right: 3rem;
+  width: 50%;
+  height: auto;
+}
+
+.score-icon {
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+}
+
+.hit-box {
+  display: flex;
+  flex-direction: row;
+}
+
+/* media query */
+@media only screen and (max-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+  }
+  .board {
+    width: 80%;
+    margin: 0;
+  }
+
+  .scoreboard {
+    flex-direction: row;
+    width: 80%;
+    height: 25%;
+    margin: 3rem 0;
+    align-items: flex-start;
+  }
+
+  .ship-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 1rem;
+  }
+
+  .ship-box {
+    margin: 1rem;
+    justify-content: flex-start;
+  }
+
+  .ship-image {
+    margin-right: 1rem;
+    width: 75%;
+  }
+
+  .hit-box {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  main {
+    margin: 0;
+    padding: 0;
+  }
+  .board {
+    margin: 0;
+    width: 95%;
+    border-width: 10px;
+    box-sizing: content-box;
+  }
+  .scoreboard {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+  .player-board {
+    width: 100%;
+  }
+
+  .ship-container {
+    margin: 0;
+  }
 }

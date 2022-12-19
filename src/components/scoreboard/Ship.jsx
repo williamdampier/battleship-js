@@ -20,8 +20,8 @@ const Ship = ({ name, size, count }) => {
   }, []);
   return (
     <div className='ship-box'>
-      {name && <img src={shipImage[name]} alt={name} />}
-      {hits && hits}
+      {name && <img className='ship-image' src={shipImage[name]} alt={name} />}
+      <div className='hit-box'>{hits && hits}</div>
     </div>
   );
 };
