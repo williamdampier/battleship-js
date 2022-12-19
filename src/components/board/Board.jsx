@@ -2,11 +2,10 @@ import { config } from '../../config';
 import { useEffect, useState } from 'react';
 import Cell from './Cell';
 
-const Board = () => {
+const Board = ({ increaseScore }) => {
   const [cells, setCells] = useState([]);
 
   const checkHit = (x, y) => {
-    console.log(`func coordinates ${x} ${y}`);
     for (let i = 0; i < config.layout.length; i++) {
       for (let j = 0; j < config.layout[i].positions.length; j++) {
         if (
@@ -19,8 +18,6 @@ const Board = () => {
     }
     return { ship: 'none', content: 'miss' };
   };
-
-  console.log(checkHit(2, 9));
 
   const fillBoard = (cells) => {
     let tmpArr = [];
@@ -49,6 +46,7 @@ const Board = () => {
             id={item.id}
             status='empty'
             content={item.content}
+            increaseScore={increaseScore}
           />
         );
       })}
