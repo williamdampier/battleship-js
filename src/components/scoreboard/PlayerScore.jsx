@@ -1,3 +1,5 @@
+import { useSelector } from 'react-redux';
+
 const formattedNumber = (myNumber) => ('0' + myNumber).slice(-2);
 
 const PlayerScore = ({ player, score }) => {

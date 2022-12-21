@@ -1,8 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import PlayerScore from './PlayerScore';
 import ShipScore from './ShipScore';
 
-const ScoreBoard = ({ score }) => {
+const ScoreBoard = () => {
+  const { score } = useSelector((state) => state.playerScore);
   return (
     <div className='scoreboard'>
       <div className='player-board'>
