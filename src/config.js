@@ -1,14 +1,14 @@
 export const config = {
   shiptypes: {
     aircraft: { size: 5, count: 1 },
-    battleship: { size: 5, count: 1 },
-    cruiser: { size: 4, count: 1 },
+    battleship: { size: 4, count: 1 },
+    cruiser: { size: 3, count: 1 },
     submarine: { size: 3, count: 1 },
-    carrier: { size: 3, count: 1 },
+    carrier: { size: 2, count: 1 },
   },
   layout: [
     {
-      ship: 'carrier',
+      ship: 'aircraft',
       positions: [
         [2, 9],
         [3, 9],
@@ -47,7 +47,6 @@ export const config = {
       positions: [
         [3, 5],
         [3, 6],
-        [3, 7],
       ],
     },
   ],

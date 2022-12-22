@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { config } from '../../config';
 
 const initialState = {
   score: 0,
@@ -9,18 +10,33 @@ export const playerScoreSlice = createSlice({
   name: 'playerScore',
   initialState,
   reducers: {
-    init: {},
+    initScoreboard: (state) => {
+      const ships = Object.entries(config.shiptypes);
+      state.ships = ships.map((ship) => {
+        const size = Array(ship[1].size).fill('plus');
+        return { name: ship[0], size };
+      });
+    },
     increaseScore: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
       state.score += 1;
+    },
+    scoreHit: (state, action) => {
+      const shipName = action.payload;
+      const shipIndex = state.ships.findIndex((ship) => ship.name === shipName);
+      console.log(action.payload);
+      for (let i = 0; i < state.ships[shipIndex].size.length; i++) {
+        if (state.ships[shipIndex].size[i] === 'plus') {
+          state.ships[shipIndex].size[i] = 'minus';
+
+          return state;
+        }
+      }
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { increaseScore } = playerScoreSlice.actions;
+export const { increaseScore, initScoreboard, scoreHit } =
+  playerScoreSlice.actions;
 
 export default playerScoreSlice.reducer;
